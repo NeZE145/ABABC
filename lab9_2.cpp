@@ -4,6 +4,21 @@
 using namespace std;
 
 //[Missing Code 1] Write definition of the function findGrade() here.
+char findGrade(double A){
+	char G;
+	if(A > 90.0)
+		G='A';
+	if(A>75.0&&A<=90.0)
+		G='B';
+	if(A>60.0&&A<=75.0)
+		G='C';
+	if(A>45.0&&A<=60.0)
+		G='D';
+	if(A<=45.0)
+		G='F';
+
+	return G;
+}
 
 int main(){
 	//Input the number of students
@@ -18,8 +33,9 @@ int main(){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
 		//[Missing Code 2] Get name of the i-th students that may include whitespace.
+		getline(cin,name[i]);
 		cout << "Score of student " << i+1 << ": ";
-		//[Missing Code 3] Get score of the i-th students.
+		cin >> score[i];
 		i++;
 	}
 	
